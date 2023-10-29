@@ -18,10 +18,10 @@
   --btn-default-hover-bg: transparent;
   --btn-default-hover-color: var(--link-hover-color);
   --btn-default-hover-border-color: var(--link-hover-color);
-  --highlight-background: #f3f3f3;
-  --highlight-foreground: #444;
-  --highlight-gutter-background: #e1e1e1;
-  --highlight-gutter-foreground: #555;
+  --highlight-background: #333;
+  --highlight-foreground: #fff;
+  --highlight-gutter-background: #474747;
+  --highlight-gutter-foreground: #eaeaea;
   color-scheme: light;
 }
 html {
@@ -374,113 +374,189 @@ code.hljs {
   padding: 3px 5px
 }
 /*!
-  Theme: Default
-  Description: Original highlight.js style
-  Author: (c) Ivan Sagalaev <maniac@softwaremaniacs.org>
-  Maintainer: @highlightjs/core-team
-  Website: https://highlightjs.org/
-  License: see project LICENSE
-  Touched: 2021
-*/
-/*
-This is left on purpose making default.css the single file that can be lifted
-as-is from the repository directly without the need for a build step
+   Theme: Agate
+   Author: (c) Taufik Nurrohman <hi@taufik-nurrohman.com>
+   Maintainer: @taufik-nurrohman
+   Updated: 2021-04-24
 
-Typically this "required" baseline CSS is added by `makestuff.js` during build.
+   #333
+   #62c8f3
+   #7bd694
+   #888
+   #a2fca2
+   #ade5fc
+   #b8d8a2
+   #c6b4f0
+   #d36363
+   #fc9b9b
+   #fcc28c
+   #ffa
+   #fff
 */
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
-}
-code.hljs {
-  padding: 3px 5px
-}
-/* end baseline CSS */
 .hljs {
-  background: #F3F3F3;
-  color: #444
+  background: #333;
+  color: #fff
 }
-/* Base color: saturation 0; */
-.hljs-subst {
-  /* default */
-  
-}
-/* purposely ignored */
-.hljs-formula,
-.hljs-attr,
-.hljs-property,
-.hljs-params {
-  
-}
-.hljs-comment {
-  color: #697070
-}
-.hljs-tag,
-.hljs-punctuation {
-  color: #444a
-}
-.hljs-tag .hljs-name,
-.hljs-tag .hljs-attr {
-  color: #444
-}
-.hljs-keyword,
-.hljs-attribute,
-.hljs-selector-tag,
-.hljs-meta .hljs-keyword,
 .hljs-doctag,
-.hljs-name {
+.hljs-meta-keyword,
+.hljs-name,
+.hljs-strong {
   font-weight: bold
 }
-/* User color: hue: 0 */
-.hljs-type,
-.hljs-string,
-.hljs-number,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-quote,
-.hljs-template-tag,
-.hljs-deletion {
-  color: #880000
-}
-.hljs-title,
-.hljs-section {
-  color: #880000;
-  font-weight: bold
-}
-.hljs-regexp,
-.hljs-symbol,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-link,
-.hljs-selector-attr,
-.hljs-operator,
-.hljs-selector-pseudo {
-  color: #ab5656
-}
-/* Language color: hue: 90; */
-.hljs-literal {
-  color: #695
-}
-.hljs-built_in,
-.hljs-bullet,
 .hljs-code,
-.hljs-addition {
-  color: #397300
-}
-/* Meta color: hue: 200 */
-.hljs-meta {
-  color: #1f7199
-}
-.hljs-meta .hljs-string {
-  color: #38a
-}
-/* Misc effects */
 .hljs-emphasis {
   font-style: italic
 }
-.hljs-strong {
-  font-weight: bold
+.hljs-section,
+.hljs-tag {
+  color: #62c8f3
+}
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-template-variable,
+.hljs-variable {
+  color: #ade5fc
+}
+.hljs-meta-string,
+.hljs-string {
+  color: #a2fca2
+}
+.hljs-attr,
+.hljs-quote,
+.hljs-selector-attr {
+  color: #7bd694
+}
+.hljs-tag .hljs-attr {
+  color: inherit
+}
+.hljs-attribute,
+.hljs-title,
+.hljs-type {
+  color: #ffa
+}
+.hljs-number,
+.hljs-symbol {
+  color: #d36363
+}
+.hljs-bullet,
+.hljs-template-tag {
+  color: #b8d8a2
+}
+.hljs-built_in,
+.hljs-keyword,
+.hljs-literal,
+.hljs-selector-tag {
+  color: #fcc28c
+}
+.hljs-code,
+.hljs-comment,
+.hljs-formula {
+  color: #888
+}
+.hljs-link,
+.hljs-selector-pseudo,
+.hljs-regexp {
+  color: #c6b4f0
+}
+.hljs-meta {
+  color: #fc9b9b
+}
+.hljs-deletion {
+  background: #fc9b9b;
+  color: #333
+}
+.hljs-addition {
+  background: #a2fca2;
+  color: #333
+}
+/* Purposely ignored */
+.hljs-operator,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation {
+  
+}
+.hljs-subst {
+  color: #fff
+}
+/* This applies only if HTML auto-merging plugin is enabled by user (#2889) */
+.hljs a {
+  color: inherit
+}
+.hljs a:focus,
+.hljs a:hover {
+  color: inherit;
+  text-decoration: underline
+}
+.hljs mark {
+  background: #555;
+  color: inherit
+}
+.highlight:hover .copy-btn,
+.code-container:hover .copy-btn {
+  opacity: 1;
+}
+.code-container {
+  position: relative;
+}
+.copy-btn {
+  color: #333;
+  cursor: pointer;
+  line-height: 1.6;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  transition: opacity 0.2s ease-in-out;
+  color: var(--highlight-foreground);
+  font-size: 14px;
+  right: 0;
+  top: 2px;
+}
+figure.highlight {
+  border-radius: 5px;
+  box-shadow: 0 10px 30px 0 rgba(0,0,0,0.4);
+  padding-top: 30px;
+}
+figure.highlight .table-container {
+  border-radius: 0 0 5px 5px;
+}
+figure.highlight::before {
+  background: #fc625d;
+  box-shadow: 20px 0 #fdbc40, 40px 0 #35cd4b;
+  left: 12px;
+  margin-top: -20px;
+  position: absolute;
+  border-radius: 50%;
+  content: ' ';
+  height: 12px;
+  width: 12px;
+}
+.expand-btn {
+  bottom: 0;
+  color: var(--highlight-foreground);
+  cursor: pointer;
+  display: none;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+}
+.fold-cover {
+  background-image: linear-gradient(to top, var(--highlight-background) 0, rgba(0,0,0,0) 100%);
+  bottom: 0;
+  display: none;
+  height: 50px;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+.highlight-fold {
+  max-height: 500px;
+  overflow-y: hidden !important;
+}
+.highlight-fold .expand-btn,
+.highlight-fold .fold-cover {
+  display: block;
 }
 code,
 kbd,
@@ -1199,6 +1275,44 @@ pre code {
 .use-motion .menu-item {
   visibility: hidden;
 }
+.github-corner :hover .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+.github-corner svg {
+  color: #fff;
+  fill: var(--theme-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  .github-corner {
+    display: none;
+  }
+  .github-corner .github-corner:hover .octo-arm {
+    animation: none;
+  }
+  .github-corner .github-corner .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+@media (max-width: 767px) {
+  .github-corner svg {
+    top: inherit;
+  }
+}
+@keyframes octocat-wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  20%, 60% {
+    transform: rotate(-25deg);
+  }
+  40%, 80% {
+    transform: rotate(10deg);
+  }
+}
 .sidebar-inner {
   color: #999;
   padding: 18px 10px;
@@ -1590,7 +1704,6 @@ pre code {
 }
 .back-to-top span {
   margin-right: 8px;
-  display: none;
 }
 .back-to-top .fa {
   text-align: center;
@@ -2268,6 +2381,114 @@ ul.breadcrumb li:last-child {
   border-bottom-color: #111;
   color: #111;
 }
+.search-active {
+  overflow: hidden;
+}
+.search-pop-overlay {
+  background: rgba(0,0,0,0);
+  display: flex;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transition: visibility 0.4s, background 0.4s;
+  visibility: hidden;
+  width: 100%;
+  z-index: 40;
+}
+.search-active .search-pop-overlay {
+  background: rgba(0,0,0,0.3);
+  visibility: visible;
+}
+.search-popup {
+  background: var(--card-bg-color);
+  border-radius: 5px;
+  height: 80%;
+  margin: auto;
+  transform: scale(0);
+  transition: transform 0.4s;
+  width: 700px;
+}
+.search-active .search-popup {
+  transform: scale(1);
+}
+@media (max-width: 767px) {
+  .search-popup {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+.search-popup .search-icon,
+.search-popup .popup-btn-close {
+  color: #999;
+  font-size: 18px;
+  padding: 0 10px;
+}
+.search-popup .popup-btn-close {
+  cursor: pointer;
+}
+.search-popup .popup-btn-close:hover .fa {
+  color: #222;
+}
+.search-popup .search-header {
+  background: #eee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  display: flex;
+  padding: 5px;
+}
+.search-popup input.search-input {
+  background: transparent;
+  border: 0;
+  outline: 0;
+  width: 100%;
+}
+.search-popup input.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-popup .search-result-container {
+  height: calc(100% - 55px);
+  overflow: auto;
+  padding: 5px 25px;
+}
+.search-popup .search-result-container hr {
+  margin: 5px 0 10px;
+}
+.search-popup .search-result-container hr:first-child {
+  display: none;
+}
+.search-popup .search-result-list {
+  margin: 0 5px;
+  padding: 0;
+}
+.search-popup a.search-result-title {
+  font-weight: bold;
+}
+.search-popup p.search-result {
+  border-bottom: 1px dashed #ccc;
+  padding: 5px 0;
+}
+.search-popup .search-input-container {
+  flex-grow: 1;
+  padding: 2px;
+}
+.search-popup .no-result {
+  display: flex;
+}
+.search-popup .search-result-list {
+  width: 100%;
+}
+.search-popup .search-result-icon {
+  color: #ccc;
+  margin: auto;
+}
+mark.search-keyword {
+  background: transparent;
+  border-bottom: 1px dashed #ff2a2a;
+  color: #ff2a2a;
+  font-weight: bold;
+}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -2540,7 +2761,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #e4ffff;
+  background: #1fffff;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
