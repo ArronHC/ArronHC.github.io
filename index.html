@@ -148,7 +148,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -159,7 +159,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -199,6 +199,108 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2023/10/31/%E8%BF%AD%E4%BB%A3%E5%88%86%E5%BD%A2%E7%B3%BB%E7%BB%9F/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://i0.imgs.ovh/2023/10/29/AL2WI.jpeg">
+      <meta itemprop="name" content="ArronHC">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ArronHC's Blog">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | ArronHC's Blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2023/10/31/%E8%BF%AD%E4%BB%A3%E5%88%86%E5%BD%A2%E7%B3%BB%E7%BB%9F/" class="post-title-link" itemprop="url">IFS</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-10-31 15:27:44 / 修改时间：20:23:05" itemprop="dateCreated datePublished" datetime="2023-10-31T15:27:44+08:00">2023-10-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Java%E9%A1%B9%E7%9B%AE/" itemprop="url" rel="index"><span itemprop="name">Java项目</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><img title="" src="https://i0.imgs.ovh/2023/10/31/ABTL2.gif" alt="" width="194" data-align="inline"><img title="" src="https://i0.imgs.ovh/2023/10/29/AX64d.png" alt="" width="163"><img title="" src="https://i0.imgs.ovh/2023/10/31/AByDv.gif" alt="" width="198"></p>
+<!---more--->
+
+<!---more-->
+
+
+
+<h2 id="什么是IFS？"><a href="#什么是IFS？" class="headerlink" title="什么是IFS？"></a>什么是IFS？</h2><p>IFS(Iterated Function System)迭代函数系统，可以通过迭代来创造出分形图案</p>
+<h2 id="什么是分形图案？"><a href="#什么是分形图案？" class="headerlink" title="什么是分形图案？"></a>什么是分形图案？</h2><p>分形图案：力图通过数学方法，来创造自相似的图案（例如树叶等）</p>
+<hr>
+<p>下面，我们通过三类例子来深入探索IFS的世界：</p>
+<h3 id="1-单一常量"><a href="#1-单一常量" class="headerlink" title="1.单一常量"></a>1.单一常量</h3><p><img src="https://i0.imgs.ovh/2023/10/31/ABDjK.png"></p>
+<p>超简单是不是~</p>
+<p>代码实现：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> <span class="title function_">generate</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">        <span class="type">double</span> x=<span class="number">0</span>,y=<span class="number">0</span>;</span><br><span class="line">        <span class="type">double</span> tx,ty;</span><br><span class="line">        <span class="type">double</span> a=-<span class="number">1.8</span>,b=-<span class="number">2.0</span>,c=-<span class="number">0.5</span>,d=-<span class="number">0.9</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">500000</span>; i++) &#123;</span><br><span class="line">            tx=Math.sin(a*y)+c*Math.cos(a*x);</span><br><span class="line">            ty=Math.sin(b*x)+d*Math.cos(b*y);</span><br><span class="line">            <span class="type">int</span> px=(<span class="type">int</span>)(tx*<span class="number">100</span>)+<span class="number">400</span>;</span><br><span class="line">            <span class="type">int</span> py=(<span class="type">int</span>)(ty*<span class="number">100</span>)+<span class="number">400</span>;</span><br><span class="line">            g.drawLine(px,py,px,py);</span><br><span class="line">            x=tx;</span><br><span class="line">            y=ty;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在这里，我们通过放大坐标，使图像能够正常显示</p>
+<p>不过有一个问题，在生成图片的时候会面临着生成效率慢的问题，为啥呢？</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">电脑生成图像所需步骤：</span><br><span class="line">RAM--&gt;CPU--&gt;RAM--&gt;I/O--&gt;GPU--&gt;SCRN</span><br></pre></td></tr></table></figure>
+
+<p>上述程序在运行时，每处理一个像素点，就会将上述流程走一遍，所以会拖慢速度。</p>
+<p>假如，我先处理好所有的像素点，再一起输出到GPU，会不会更快呢？</p>
+<p>这里，需要用到一个新的类型名： BufferedImage我们先将所有像素点缓存到BufferedImage中，最后一起输出即可</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">BuffedImage</span> <span class="variable">Bfg</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">BufferImage</span>(界面x长度,界面y长度,);</span><br><span class="line"><span class="comment">//buffered:缓冲的、缓存的</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -322,9 +424,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-10-29 22:14:28 / 修改时间：22:51:35" itemprop="dateCreated datePublished" datetime="2023-10-29T22:14:28+08:00">2023-10-29</time>
+      <time title="创建时间：2023-10-29 22:14:28" itemprop="dateCreated datePublished" datetime="2023-10-29T22:14:28+08:00">2023-10-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-10-31 15:38:41" itemprop="dateModified" datetime="2023-10-31T15:38:41+08:00">2023-10-31</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
