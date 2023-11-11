@@ -8,22 +8,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title></title>
-    <url>/2023/11/11/1/</url>
-    <content><![CDATA[<h1 id="NOI1999-���յ���"><a href="#NOI1999-���յ���" class="headerlink" title="[NOI1999] ���յ���"></a>[NOI1999] ���յ���</h1><h2 id="��L����"><a href="#��L����" class="headerlink" title="��Ŀ����"></a>��Ŀ����</h2><p><a href="https://www.luogu.com.cn/problem/T148457">���ݼ�ǿ�� link</a></p>
-<h2 id="��L����-1"><a href="#��L����-1" class="headerlink" title="��Ŀ����"></a>��Ŀ����</h2><p>7 �� 17 ���� Mr.W �����գ�ACM-THU Ϊ��Ҫ����һ�����Ϊ $N\pi$ �� $M$ �����յ��⣬ÿ�㶼��һ��Բ���塣</p>
-<p>������������� $i$��$1 \leq i \leq M$���㵰���ǰ뾶Ϊ $R_i$���߶�Ϊ $H_i$ ��Բ������ $i \lt M$ ʱ��Ҫ�� $R_i \gt R_{i+1}$ �� $H_i \gt H_{i+1}$��</p>
-<p>����Ҫ�ڵ�����Ĩ���ͣ�Ϊ�����ܽ�Լ���ѣ�����ϣ����������棨����һ����µ�����⣩����� $Q$ ��С��</p>
-<p>���̶Ը����� $N$ �� $M$���ҳ�����������������ʵ��� $R_i$ �� $H_i$ ��ֵ����ʹ $S&#x3D;\dfrac{Q}{\pi}$ ��С��</p>
-<p>���� $Q$ �⣬�����������ݽ�Ϊ��������</p>
-<h2 id="�����ʽ"><a href="#�����ʽ" class="headerlink" title="�����ʽ"></a>�����ʽ</h2><p>��һ��Ϊһ������ $N$��$N \leq 2 \times 10^4$������ʾ�������ĵ�������Ϊ $N\pi$��</p>
-<p>�ڶ���Ϊ $M$��$M \leq 15$������ʾ����Ĳ���Ϊ $M$��</p>
-<h2 id="�����ʽ-1"><a href="#�����ʽ-1" class="headerlink" title="�����ʽ"></a>�����ʽ</h2><p>���һ������ $S$�����޽⣬��� $0$��</p>
-<h2 id="����-1"><a href="#����-1" class="headerlink" title="���� #1"></a>���� #1</h2><h3 id="��������-1"><a href="#��������-1" class="headerlink" title="�������� #1"></a>�������� #1</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">100</span><br><span class="line">2</span><br></pre></td></tr></table></figure>
-
-<h3 id="�������-1"><a href="#�������-1" class="headerlink" title="������� #1"></a>������� #1</h3><figure class="highlight"><table><tr><td class="code"><pre><span class="line">68</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>洛谷P3952【时间复杂度】题解</title>
     <url>/2023/11/11/%E6%B4%9B%E8%B0%B7P3952%E3%80%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%91%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<h2 id="P3952【时间复杂度】"><a href="#P3952【时间复杂度】" class="headerlink" title="P3952【时间复杂度】"></a><a href="https://www.luogu.com.cn/problem/P3952">P3952【时间复杂度】</a></h2><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">4</span> O(n^<span class="number">2</span>)</span><br><span class="line"><span class="attribute">F</span> x <span class="number">1</span> n</span><br><span class="line"><span class="attribute">F</span> x <span class="number">1</span> <span class="number">10</span></span><br><span class="line"><span class="attribute">E</span></span><br><span class="line"><span class="attribute">E</span></span><br></pre></td></tr></table></figure>
@@ -74,8 +58,8 @@
         <category>c++练习</category>
       </categories>
       <tags>
-        <tag>洛谷题解</tag>
         <tag>递归</tag>
+        <tag>洛谷题解</tag>
       </tags>
   </entry>
   <entry>
