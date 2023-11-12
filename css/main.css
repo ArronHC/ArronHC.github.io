@@ -2625,6 +2625,13 @@ mark.search-keyword {
   color: #ff2a2a;
   font-weight: bold;
 }
+mjx-container[jax='CHTML'][display='true'],
+.has-jax {
+  overflow: auto hidden;
+}
+mjx-container[display='true'] + br {
+  display: none;
+}
 .use-motion .animated {
   animation-fill-mode: none;
   visibility: inherit;
@@ -2897,7 +2904,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #1be391;
+  background: #ff9350;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
