@@ -10,8 +10,9 @@ src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C2
   <entry>
     <title>写一个五子棋小项目</title>
     <url>/2023/12/06/%E5%86%99%E4%B8%80%E4%B8%AA%E4%BA%94%E5%AD%90%E6%A3%8B%E5%B0%8F%E9%A1%B9%E7%9B%AE/</url>
-    <content><![CDATA[<p>今天来写一个五子棋的小项目，最终实现如下功能：</p>
-<span id="more"></span>
+    <content><![CDATA[<p>今天来写一个五子棋的小项目，最终实现如下功能： <img
+src="https://files.catbox.moe/oxcet9.png" alt="Begin~" />
+<span id="more"></span></p>
 <ol type="1">
 <li>进行对战并判断输赢</li>
 <li>悔棋</li>
@@ -85,10 +86,6 @@ alt="098i4e.png" /></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">(act.equals(<span class="string">&quot;复盘&quot;</span>)) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> step;</span><br><span class="line">        ChessFlag = <span class="number">0</span>;</span><br><span class="line">        DelBoard(g);</span><br><span class="line">        <span class="type">int</span> <span class="variable">chess</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">1000</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">RuntimeException</span>(ex);</span><br><span class="line">            &#125;</span><br><span class="line">            GoArr[EveryI[i]][EveryJ[i]] = chess;</span><br><span class="line">            Repaint(g);</span><br><span class="line">            chess = (chess == <span class="number">1</span> ? <span class="number">2</span> : <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>这里面使用<code>Thread.sleep()</code>实现了每隔一秒下一步棋的效果</p>
 <p>暂时先这样叭，最后还差一个人机对战，估计是要调用什么库来实现吧~</p>
-<figure>
-<img src="https://files.catbox.moe/oxcet9.png" alt="The End" />
-<figcaption aria-hidden="true">The End</figcaption>
-</figure>
 <p><span class="math inline">\(-By\ AHC\)</span></p>
 ]]></content>
       <categories>
