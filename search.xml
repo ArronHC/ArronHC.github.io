@@ -1,48 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>hexo基本用法</title>
-    <url>/2023/10/29/hexo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<span id="more"></span>
-<!--more-->
-<h2 id="section"><!---more---></h2>
-<h1 id="quick-start">Quick Start</h1>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>哈喽~欢迎来到我的博客🎊🎊🎊</title>
+    <url>/2023/11/08/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p><img
+src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C247%2C247%2C1&amp;quote=Hold+On%7E%7E&amp;github=ArronHC&amp;luogu=Arron_HC" /></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>全排列</title>
-    <url>/2023/10/31/%E5%85%A8%E6%8E%92%E5%88%97/</url>
-    <content><![CDATA[<h2 id="p1706-全排列问题"><a
-href="https://www.luogu.com.cn/problem/P1706">P1706 全排列问题</a></h2>
-<p>终于要写c++的博客了~近期从搜索入手，将暴力算法+剪枝掌握熟练</p>
-<p>对于全排列问题，我们使用dfs，将搜索的当前状态设定为当前位置，通过遍历1~n，若该数没有被使用过，便将该数填入，然后寻找下一位，直到n+1位跳出递归。</p>
-<p>由此，我们可以大概抽象出dfs的基本步骤：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(当前状态)</span></span>&#123;</span><br><span class="line">    终止条件</span><br><span class="line"></span><br><span class="line">    对于当前状态进行遍历，寻找下一可行状态</span><br><span class="line">    改变下一状态相关参数</span><br><span class="line">    <span class="built_in">dfs</span>(下一状态)</span><br><span class="line">    恢复“下一状态”（时则为本次状态）原样</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="代码实现">代码实现：</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">20</span>],flag[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur==n+<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cout&lt;&lt;<span class="built_in">setw</span>(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            a[cur]=i;</span><br><span class="line">            flag[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(cur+<span class="number">1</span>);</span><br><span class="line">            a[cur]=<span class="number">0</span>;</span><br><span class="line">            flag[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>c++练习</category>
-      </categories>
-      <tags>
-        <tag>洛谷题解</tag>
-        <tag>递归</tag>
-      </tags>
   </entry>
   <entry>
     <title>写一个五子棋小项目</title>
@@ -133,6 +96,13 @@ alt="098i4e.png" /></p>
       </categories>
   </entry>
   <entry>
+    <title>11.19~11.26计划</title>
+    <url>/2023/11/18/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/</url>
+    <content><![CDATA[<p>最近事情较多，百废待兴，下面列出计划： (11.19~11.26) 1. 自学指针 2.
+捡起Java的学习 3. 高数课程赶上 4. 计算机系统实践的作业完成</p>
+]]></content>
+  </entry>
+  <entry>
     <title>洛谷P3952【时间复杂度】题解</title>
     <url>/2023/11/11/%E6%B4%9B%E8%B0%B7P3952%E3%80%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%91%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<h2 id="p3952时间复杂度"><a
@@ -181,51 +151,24 @@ r\)</span>的循环，那么后面的循环不再进行统计），其最大值�
       </tags>
   </entry>
   <entry>
-    <title>谢尔宾斯基地毯</title>
-    <url>/2023/10/29/%E8%B0%A2%E5%B0%94%E5%AE%BE%E6%96%AF%E5%9F%BA%E5%9C%B0%E6%AF%AF/</url>
-    <content><![CDATA[<p>先看成品：</p>
-<p><img src="https://i0.imgs.ovh/2023/10/29/AX64d.png" title="" alt="谢尔宾斯基地毯" width="202"></p>
-<span id="more"></span>
-<h3 id="实现思路迭代递归">实现思路：迭代递归</h3>
-<ul>
-<li>以画整张地毯的思路画某一块地毯，<strong>注意终止条件</strong></li>
-</ul>
-<p>需要的函数：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">fillRect(x,y,w,h);<span class="comment">//矩形左上角坐标+宽、高 </span></span><br></pre></td></tr></table></figure>
-<h1 id="前置知识">前置知识：</h1>
-<ol type="1">
-<li>继承</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">JFrame</span></span><br><span class="line"><span class="comment">//这里的意思是：</span></span><br><span class="line"><span class="comment">//DrawCarpet类继承了JFrame，于是在DrawCarpet类中可以直接调用JFrame的所有方法</span></span><br><span class="line"><span class="comment">//（DrawCarpet是JFrame的子类）</span></span><br></pre></td></tr></table></figure>
-<p>   2.构造函数</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">Jframe</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DrawCarpet</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//与类同名的函数不声明类型，这样在调用DrawCarpet类时会自动执行DrawCarpet()函数中的指令</span></span><br></pre></td></tr></table></figure>
-<p>   3.重构</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">    <span class="built_in">super</span>.paint(g);</span><br><span class="line">    DrawCarpet();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//@Override用来声明我们要自己重写java中自带的paint()函数，</span></span><br><span class="line"><span class="comment">//而super.paint(g)的意思是继承原本paint()函数中的所有方法</span></span><br></pre></td></tr></table></figure>
-<h1 id="代码实现">代码实现：</h1>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Scarpet</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Scarpet</span><span class="params">()</span>&#123;</span><br><span class="line">        setTitle(<span class="string">&quot;谢尔宾斯基地毯&quot;</span>);</span><br><span class="line">        setSize(<span class="number">800</span>,<span class="number">800</span>);</span><br><span class="line">        setResizable(<span class="literal">true</span>);</span><br><span class="line">        setDefaultCloseOperation(EXIT_ON_CLOSE);</span><br><span class="line">        setLocationRelativeTo(<span class="literal">null</span>);</span><br><span class="line">        setVisible(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.paint(g);</span><br><span class="line">        draw(<span class="number">150</span>,<span class="number">150</span>,<span class="number">500</span>,<span class="number">500</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> w,<span class="type">int</span> h,Graphics g)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(w&lt;<span class="number">3</span>) <span class="keyword">return</span> ;</span><br><span class="line">        g.fillRect(x+w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>);</span><br><span class="line">        draw(x,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Scarpet</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过Java，我们得以可视化递归的过程，显现递归之美。</p>
+    <title>全排列</title>
+    <url>/2023/10/31/%E5%85%A8%E6%8E%92%E5%88%97/</url>
+    <content><![CDATA[<h2 id="p1706-全排列问题"><a
+href="https://www.luogu.com.cn/problem/P1706">P1706 全排列问题</a></h2>
+<p>终于要写c++的博客了~近期从搜索入手，将暴力算法+剪枝掌握熟练</p>
+<p>对于全排列问题，我们使用dfs，将搜索的当前状态设定为当前位置，通过遍历1~n，若该数没有被使用过，便将该数填入，然后寻找下一位，直到n+1位跳出递归。</p>
+<p>由此，我们可以大概抽象出dfs的基本步骤：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(当前状态)</span></span>&#123;</span><br><span class="line">    终止条件</span><br><span class="line"></span><br><span class="line">    对于当前状态进行遍历，寻找下一可行状态</span><br><span class="line">    改变下一状态相关参数</span><br><span class="line">    <span class="built_in">dfs</span>(下一状态)</span><br><span class="line">    恢复“下一状态”（时则为本次状态）原样</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现">代码实现：</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">20</span>],flag[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur==n+<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cout&lt;&lt;<span class="built_in">setw</span>(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            a[cur]=i;</span><br><span class="line">            flag[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(cur+<span class="number">1</span>);</span><br><span class="line">            a[cur]=<span class="number">0</span>;</span><br><span class="line">            flag[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>Java项目</category>
+        <category>c++练习</category>
       </categories>
       <tags>
+        <tag>洛谷题解</tag>
         <tag>递归</tag>
-        <tag>可视化</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>11.19~11.26计划</title>
-    <url>/2023/11/18/%E8%BF%91%E6%9C%9F%E8%AE%A1%E5%88%92/</url>
-    <content><![CDATA[<p>最近事情较多，百废待兴，下面列出计划： (11.19~11.26) 1. 自学指针 2.
-捡起Java的学习 3. 高数课程赶上 4. 计算机系统实践的作业完成</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>哈喽~欢迎来到我的博客🎊🎊🎊</title>
-    <url>/2023/11/08/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<p><img
-src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C247%2C247%2C1&amp;quote=Hold+On%7E%7E&amp;github=ArronHC&amp;luogu=Arron_HC" /></p>
-]]></content>
   </entry>
   <entry>
     <title>IFS</title>
@@ -306,5 +249,62 @@ System)迭代函数系统，可以通过迭代来创造出分形图案</p>
         <tag>递归</tag>
         <tag>可视化</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>谢尔宾斯基地毯</title>
+    <url>/2023/10/29/%E8%B0%A2%E5%B0%94%E5%AE%BE%E6%96%AF%E5%9F%BA%E5%9C%B0%E6%AF%AF/</url>
+    <content><![CDATA[<p>先看成品：</p>
+<p><img src="https://i0.imgs.ovh/2023/10/29/AX64d.png" title="" alt="谢尔宾斯基地毯" width="202"></p>
+<span id="more"></span>
+<h3 id="实现思路迭代递归">实现思路：迭代递归</h3>
+<ul>
+<li>以画整张地毯的思路画某一块地毯，<strong>注意终止条件</strong></li>
+</ul>
+<p>需要的函数：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">fillRect(x,y,w,h);<span class="comment">//矩形左上角坐标+宽、高 </span></span><br></pre></td></tr></table></figure>
+<h1 id="前置知识">前置知识：</h1>
+<ol type="1">
+<li>继承</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">JFrame</span></span><br><span class="line"><span class="comment">//这里的意思是：</span></span><br><span class="line"><span class="comment">//DrawCarpet类继承了JFrame，于是在DrawCarpet类中可以直接调用JFrame的所有方法</span></span><br><span class="line"><span class="comment">//（DrawCarpet是JFrame的子类）</span></span><br></pre></td></tr></table></figure>
+<p>   2.构造函数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">Jframe</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DrawCarpet</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//与类同名的函数不声明类型，这样在调用DrawCarpet类时会自动执行DrawCarpet()函数中的指令</span></span><br></pre></td></tr></table></figure>
+<p>   3.重构</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">    <span class="built_in">super</span>.paint(g);</span><br><span class="line">    DrawCarpet();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//@Override用来声明我们要自己重写java中自带的paint()函数，</span></span><br><span class="line"><span class="comment">//而super.paint(g)的意思是继承原本paint()函数中的所有方法</span></span><br></pre></td></tr></table></figure>
+<h1 id="代码实现">代码实现：</h1>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Scarpet</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Scarpet</span><span class="params">()</span>&#123;</span><br><span class="line">        setTitle(<span class="string">&quot;谢尔宾斯基地毯&quot;</span>);</span><br><span class="line">        setSize(<span class="number">800</span>,<span class="number">800</span>);</span><br><span class="line">        setResizable(<span class="literal">true</span>);</span><br><span class="line">        setDefaultCloseOperation(EXIT_ON_CLOSE);</span><br><span class="line">        setLocationRelativeTo(<span class="literal">null</span>);</span><br><span class="line">        setVisible(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.paint(g);</span><br><span class="line">        draw(<span class="number">150</span>,<span class="number">150</span>,<span class="number">500</span>,<span class="number">500</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> w,<span class="type">int</span> h,Graphics g)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(w&lt;<span class="number">3</span>) <span class="keyword">return</span> ;</span><br><span class="line">        g.fillRect(x+w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>);</span><br><span class="line">        draw(x,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Scarpet</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过Java，我们得以可视化递归的过程，显现递归之美。</p>
+]]></content>
+      <categories>
+        <category>Java项目</category>
+      </categories>
+      <tags>
+        <tag>递归</tag>
+        <tag>可视化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo基本用法</title>
+    <url>/2023/10/29/hexo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<span id="more"></span>
+<!--more-->
+<h2 id="section"><!---more---></h2>
+<h1 id="quick-start">Quick Start</h1>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
