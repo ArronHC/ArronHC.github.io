@@ -277,8 +277,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><img
-src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C247%2C247%2C1&amp;quote=Hold+On%7E%7E&amp;github=ArronHC&amp;luogu=Arron_HC" /></p>
+          <p><img src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C247%2C247%2C1&amp;quote=Hold+On%7E%7E&amp;github=ArronHC&amp;luogu=Arron_HC" alt=""></p>
 
       
     </div>
@@ -372,138 +371,80 @@ src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C2
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>正则表达式无疑是一个令人头痛的东西...😵</p>
+          <p>正则表达式无疑是一个令人头痛的东西…😵</p>
 <p>下面，请跟着我，step by step，认真学学<strong>它</strong>🫡</p>
-<p>在开始之前，推荐一个学习正则表达式的<a
-target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
+<p>在开始之前，推荐一个学习正则表达式的<a target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
 <p>大家可以从这个网站中在线测试正则表达式的匹配情况</p>
-<h2 id="正则表达式">正则表达式</h2>
-<h3 id="什么是正则表达式">什么是正则表达式？</h3>
-<blockquote>
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><h3 id="什么是正则表达式？"><a href="#什么是正则表达式？" class="headerlink" title="什么是正则表达式？"></a>什么是正则表达式？</h3><blockquote>
 <p>正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。一个正则表达式是一种从左到右匹配主体字符串的模式，常使用缩写的术语“regex”或“regexp”。</p>
 </blockquote>
-<h3 id="一最简单的字符串匹配">一、最简单的字符串匹配</h3>
-<figure>
-<img src="https://files.catbox.moe/j0h86h.png" alt="1" />
-<figcaption aria-hidden="true">1</figcaption>
-</figure>
+<h3 id="一、最简单的字符串匹配"><a href="#一、最简单的字符串匹配" class="headerlink" title="一、最简单的字符串匹配"></a>一、最简单的字符串匹配</h3><p><img src="https://files.catbox.moe/j0h86h.png" alt="1"></p>
 <p>让它匹配什么，它就去找什么</p>
 <p>但是，如果想要匹配的对象不巧是元字符怎么办？</p>
 <p>好办！</p>
 <p>使用转义字符<code>\</code>即可。</p>
 <p>例如，想要匹配字符串中的所有句号<code>.</code></p>
 <p>则这样写：</p>
-<figure>
-<img src="https://files.catbox.moe/zb41ik.png" alt="1" />
-<figcaption aria-hidden="true">1</figcaption>
-</figure>
-<h3 id="二元字符">二、元字符</h3>
-<blockquote>
-<p>正则表达式主要依赖于元字符。元字符不代表他们本身的字面意思，他们都有特殊的含义。一些元字符写在方括号中的时候有一些特殊的意思。以下是一些元字符的介绍：
-<img src="https://files.catbox.moe/6btvuh.png" alt="0" /></p>
+<p><img src="https://files.catbox.moe/zb41ik.png" alt="1"></p>
+<h3 id="二、元字符"><a href="#二、元字符" class="headerlink" title="二、元字符"></a>二、元字符</h3><blockquote>
+<p>正则表达式主要依赖于元字符。元字符不代表他们本身的字面意思，他们都有特殊的含义。一些元字符写在方括号中的时候有一些特殊的意思。以下是一些元字符的介绍：<br><img src="https://files.catbox.moe/6btvuh.png" alt="0"></p>
 </blockquote>
 <p>下面，我们逐个来理解熟悉：</p>
-<h4 id="句号-.">1.句号 .</h4>
-<p>匹配满足后缀的所有字符串</p>
+<h4 id="1-句号"><a href="#1-句号" class="headerlink" title="1.句号 ."></a>1.句号 .</h4><p>匹配满足后缀的所有字符串</p>
 <p>举例：</p>
 <p>若表达式为<code>.ar</code>，则是匹配字符串中所有<code>ar</code>结尾的字符串</p>
-<figure>
-<img src="https://files.catbox.moe/kp8ckz.png" alt="1" />
-<figcaption aria-hidden="true">1</figcaption>
-</figure>
-<h3 id="字符集">2.字符集 []</h3>
-<p>在方括号中使用连字符来指定字符集的范围</p>
+<p><img src="https://files.catbox.moe/kp8ckz.png" alt="1"></p>
+<h3 id="2-字符集"><a href="#2-字符集" class="headerlink" title="2.字符集 []"></a>2.字符集 []</h3><p>在方括号中使用连字符来指定字符集的范围</p>
 <p>举例：</p>
 <p>若表达式为<code>[Tt]he</code>，则会匹配字符串中的所有<code>The</code>和<code>the</code></p>
-<figure>
-<img src="https://files.catbox.moe/74731v.png" alt="2" />
-<figcaption aria-hidden="true">2</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/74731v.png" alt="2"></p>
 <p>字符集中的字符<strong>没有顺序之分</strong></p>
-<h3 id="否定字符集">3.否定字符集 [^]</h3>
-<p>字符<code>^</code>在<code>[]</code>使用，表示否定含义。</p>
+<h3 id="3-否定字符集"><a href="#3-否定字符集" class="headerlink" title="3.否定字符集 "></a>3.否定字符集 <sup><a href="#fn_" id="reffn_"></a></sup></h3><p>字符<code>^</code>在<code>[]</code>使用，表示否定含义。</p>
 <p>例如：</p>
 <p><code>[^a]re</code>，则代表匹配所有以<code>re</code>结尾，但是<code>re</code>前面不是<code>a</code>的字符串</p>
-<figure>
-<img src="https://files.catbox.moe/2rqj00.png" alt="3" />
-<figcaption aria-hidden="true">3</figcaption>
-</figure>
-<h3 id="号">4. *号</h3>
-<p><code>*</code>字符表示前面的字符可以在字符串中出现零次或多次。换句话说，它用来表示其前面的字符的出现是可选的，并且这个字符可以重复任意次数，包括一次都不出现。</p>
+<p><img src="https://files.catbox.moe/2rqj00.png" alt="3"></p>
+<h3 id="4-号"><a href="#4-号" class="headerlink" title="4. *号"></a>4. *号</h3><p><code>*</code>字符表示前面的字符可以在字符串中出现零次或多次。换句话说，它用来表示其前面的字符的出现是可选的，并且这个字符可以重复任意次数，包括一次都不出现。</p>
 <p>例如：</p>
-<p>若表达式为<code>a*</code>，则会去匹配字符串中连续出现≥0次的a，即'','a','aa','aaa','aaaa'.....</p>
-<figure>
-<img src="https://files.catbox.moe/qk3i5e.png" alt="4" />
-<figcaption aria-hidden="true">4</figcaption>
-</figure>
-<p>可以看到，所有的空字符""、连续出现的a都被统计了</p>
-<h3 id="号-1">5. +号</h3>
-<p>与<code>*</code>号类似，不过变成了连续出现≥1次</p>
-<figure>
-<img src="https://files.catbox.moe/eh1dv2.png" alt="5.1" />
-<figcaption aria-hidden="true">5.1</figcaption>
-</figure>
+<p>若表达式为<code>a*</code>，则会去匹配字符串中连续出现≥0次的a，即’’,’a’,’aa’,’aaa’,’aaaa’…..</p>
+<p><img src="https://files.catbox.moe/qk3i5e.png" alt="4"></p>
+<p>可以看到，所有的空字符””、连续出现的a都被统计了</p>
+<h3 id="5-号"><a href="#5-号" class="headerlink" title="5. +号"></a>5. +号</h3><p>与<code>*</code>号类似，不过变成了连续出现≥1次</p>
+<p><img src="https://files.catbox.moe/eh1dv2.png" alt="5.1"></p>
 <p>在前面几个的基础上，我们就可以形成<strong>组合拳</strong>！</p>
 <p>例如：</p>
 <p>挑出结尾是≥1个连续的<code>t</code>的字符串</p>
 <p>就可以这样写：</p>
-<figure>
-<img src="https://files.catbox.moe/xmqyx1.png" alt="5.2" />
-<figcaption aria-hidden="true">5.2</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/xmqyx1.png" alt="5.2"></p>
 <blockquote>
 <p>可以对比一下不加<code>+</code>的效果：</p>
-<figure>
-<img src="https://files.catbox.moe/gr4i3u.png" alt="5.3" />
-<figcaption aria-hidden="true">5.3</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/gr4i3u.png" alt="5.3"></p>
 </blockquote>
-<h3 id="号-2">6. ?号</h3>
-<p><code>?</code>号前面的字符可出现，也可不出现</p>
+<h3 id="6-号"><a href="#6-号" class="headerlink" title="6. ?号"></a>6. ?号</h3><p><code>?</code>号前面的字符可出现，也可不出现</p>
 <p>例如：</p>
 <p><code>T?he</code>会匹配所有的<code>The</code>和<code>he</code>，因为<code>T</code>可出现可不出现</p>
-<figure>
-<img src="https://files.catbox.moe/w4d9kl.png" alt="6.1" />
-<figcaption aria-hidden="true">6.1</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/w4d9kl.png" alt="6.1"></p>
 <p>当然，我们大可以做一套组合拳，就像这样：</p>
-<figure>
-<img src="https://files.catbox.moe/kblq3v.png" alt="6.2" />
-<figcaption aria-hidden="true">6.2</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/kblq3v.png" alt="6.2"></p>
 <p>这样就筛出了<code>The</code>,<code>the</code>和<code>he</code></p>
 <blockquote>
 <p>可以对比一下不加<code>?</code>的时候：</p>
-<figure>
-<img src="https://files.catbox.moe/60u5s0.png" alt="6.3" />
-<figcaption aria-hidden="true">6.3</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/60u5s0.png" alt="6.3"></p>
 <p>则是筛选出<code>The</code>和<code>the</code></p>
 </blockquote>
-<h3 id="号-3">7. {}号</h3>
-<p>这是一个量词符号，表示某字符出现<code>xxx</code>次时才进行统计</p>
+<h3 id="7-号"><a href="#7-号" class="headerlink" title="7. {}号"></a>7. {}号</h3><p>这是一个量词符号，表示某字符出现<code>xxx</code>次时才进行统计</p>
 <p>有三种使用情况：</p>
 <ul>
 <li><code>a&#123;3&#125;</code> 意味着字符<code>a</code>出现固定3次才算数</li>
 </ul>
-<figure>
-<img src="https://files.catbox.moe/3unwtd.png" alt="7.1" />
-<figcaption aria-hidden="true">7.1</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/3unwtd.png" alt="7.1"></p>
 <ul>
 <li><code>a&#123;3,&#125;</code>意味着字符<code>a</code>出现≥3次算数</li>
 </ul>
-<figure>
-<img src="https://files.catbox.moe/bqjcrz.png" alt="7.2" />
-<figcaption aria-hidden="true">7.2</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/bqjcrz.png" alt="7.2"></p>
 <ul>
 <li><code>a&#123;3,4&#125;</code>意味着字符<code>a</code>出现3~4次算数</li>
 </ul>
-<figure>
-<img src="https://files.catbox.moe/il59gr.png" alt="7.3" />
-<figcaption aria-hidden="true">7.3</figcaption>
-</figure>
+<p><img src="https://files.catbox.moe/il59gr.png" alt="7.3"></p>
 
       
     </div>
@@ -599,35 +540,16 @@ target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
     <div class="post-body" itemprop="articleBody">
           <span id="more"></span>
 <!--more-->
-<h3 id="t1-仓库规划"><a
-target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T180">T1 仓库规划</a></h3>
-<figure>
-<img src="https://files.catbox.moe/rx4z17.png" alt="rx4z17.png" />
-<figcaption aria-hidden="true">rx4z17.png</figcaption>
-</figure>
-<p>这道题数据量较小，只需要遍历一遍就可以了 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> a[<span class="number">1005</span>][<span class="number">11</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">bool</span> do_have = <span class="literal">false</span>;<span class="comment">//是否存在上级仓库</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">bool</span> flag = <span class="literal">true</span>;<span class="comment">//仓库j是否是i的上级仓库</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>; k &lt;= m; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[j][k] &lt;= a[i][k])</span><br><span class="line">                &#123;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (flag)</span><br><span class="line">            &#123;</span><br><span class="line">                do_have = <span class="literal">true</span>;</span><br><span class="line">                cout &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (do_have == <span class="literal">false</span>)</span><br><span class="line">            cout &lt;&lt; <span class="number">0</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="t2-因子化简"><a
-target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T179">T2 因子化简</a></h3>
-<figure>
-<img src="https://files.catbox.moe/l4cu96.png" alt="l4cu96.png" />
-<figcaption aria-hidden="true">l4cu96.png</figcaption>
-</figure>
+<h3 id="T1-仓库规划"><a href="#T1-仓库规划" class="headerlink" title="T1 仓库规划"></a><a target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T180">T1 仓库规划</a></h3><p><img src="https://files.catbox.moe/rx4z17.png" alt="rx4z17.png"></p>
+<p>这道题数据量较小，只需要遍历一遍就可以了<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n, m;</span><br><span class="line"><span class="type">int</span> a[<span class="number">1005</span>][<span class="number">11</span>];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= m; j++)</span><br><span class="line">            cin &gt;&gt; a[i][j];</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="type">bool</span> do_have = <span class="literal">false</span>;<span class="comment">//是否存在上级仓库</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="type">bool</span> flag = <span class="literal">true</span>;<span class="comment">//仓库j是否是i的上级仓库</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> k = <span class="number">1</span>; k &lt;= m; k++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (a[j][k] &lt;= a[i][k])</span><br><span class="line">                &#123;</span><br><span class="line">                    flag = <span class="literal">false</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (flag)</span><br><span class="line">            &#123;</span><br><span class="line">                do_have = <span class="literal">true</span>;</span><br><span class="line">                cout &lt;&lt; j &lt;&lt; endl;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (do_have == <span class="literal">false</span>)</span><br><span class="line">            cout &lt;&lt; <span class="number">0</span> &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="T2-因子化简"><a href="#T2-因子化简" class="headerlink" title="T2 因子化简"></a><a target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T179">T2 因子化简</a></h3><p><img src="https://files.catbox.moe/l4cu96.png" alt="l4cu96.png"></p>
 <p>这道题考察<strong>分解质因数</strong></p>
-<h4 id="分解质因数">分解质因数：</h4>
-<p>做法：对于待分解的数<span
-class="math inline">\(x\)</span>，我们只需要从小到大遍历所有可能的因数，可以被x整除则一直除以此因数，直至<span
-class="math inline">\(x\)</span>被分解完毕。</p>
+<h4 id="分解质因数："><a href="#分解质因数：" class="headerlink" title="分解质因数："></a>分解质因数：</h4><p>做法：对于待分解的数$x$，我们只需要从小到大遍历所有可能的因数，可以被x整除则一直除以此因数，直至$x$被分解完毕。</p>
 <p>解释：我们知道，任何数都可以被分解为若干质因数，那么，在从小到大遍历因数时，所有非质因数都已经被分解为质因数。</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;map&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">ll Q;</span><br><span class="line">map&lt;ll, ll&gt; bucket;</span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll n, ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll sum = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">2</span>; n != <span class="number">1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (n % i == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            bucket[i]++;</span><br><span class="line">            n /= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (bucket[i] &gt;= k)</span><br><span class="line">            sum *= <span class="built_in">pow</span>(i, bucket[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin &gt;&gt; Q;</span><br><span class="line">    <span class="keyword">for</span> (ll q = <span class="number">1</span>; q &lt;= Q; q++)</span><br><span class="line">    &#123;</span><br><span class="line">        ll n, k;</span><br><span class="line">        cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">        cout &lt;&lt; <span class="built_in">query</span>(n, k) &lt;&lt; endl;</span><br><span class="line">        bucket.<span class="built_in">clear</span>();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这里需要提醒一下：对于数据 <figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10000000000 </span><span class="number">10</span></span><br></pre></td></tr></table></figure>
-倘若输出结果为1024，原因在于判断<code>n==1</code>终止循环时，此时因子5虽然加到了10，但是无法进行判断，于是所有因数5被舍去，导致答案错误。
-#### 错误代码如下： <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ll Q;</span><br><span class="line">map&lt;ll, ll&gt; bucket;</span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll n, ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll sum = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (ll i = <span class="number">2</span>; n != <span class="number">1</span>;)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            bucket[i]++;</span><br><span class="line">            n /= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (bucket[i] &gt;= k)</span><br><span class="line">            &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;i=&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; bucket[i] &lt;&lt; endl;</span><br><span class="line">                sum *= <span class="built_in">pow</span>(i, bucket[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="t3-树上搜索"><a
-target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T178">T3 树上搜索</a></h3>
-<figure>
-<img src="https://files.catbox.moe/ctdp10.png" alt="ctdp10.png" />
-<figcaption aria-hidden="true">ctdp10.png</figcaption>
-</figure>
+<p>这里需要提醒一下：对于数据<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">10000000000 </span><span class="number">10</span></span><br></pre></td></tr></table></figure><br>倘若输出结果为1024，原因在于判断<code>n==1</code>终止循环时，此时因子5虽然加到了10，但是无法进行判断，于是所有因数5被舍去，导致答案错误。</p>
+<h4 id="错误代码如下："><a href="#错误代码如下：" class="headerlink" title="错误代码如下："></a>错误代码如下：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ll Q;</span><br><span class="line">map&lt;ll, ll&gt; bucket;</span><br><span class="line"><span class="function">ll <span class="title">query</span><span class="params">(ll n, ll k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    ll sum = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span> (ll i = <span class="number">2</span>; n != <span class="number">1</span>;)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % i == <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            bucket[i]++;</span><br><span class="line">            n /= i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (bucket[i] &gt;= k)</span><br><span class="line">            &#123;</span><br><span class="line">                cout &lt;&lt; <span class="string">&quot;i=&quot;</span> &lt;&lt; i &lt;&lt; <span class="string">&quot; &quot;</span> &lt;&lt; bucket[i] &lt;&lt; endl;</span><br><span class="line">                sum *= <span class="built_in">pow</span>(i, bucket[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            i++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="T3-树上搜索"><a href="#T3-树上搜索" class="headerlink" title="T3 树上搜索"></a><a target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T178">T3 树上搜索</a></h3><p><img src="https://files.catbox.moe/ctdp10.png" alt="ctdp10.png"></p>
 
       
     </div>
@@ -727,8 +649,7 @@ target="_blank" rel="noopener" href="http://118.190.20.162/view.page?gpid=T178">
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>今天来写一个五子棋的小项目，最终实现如下功能： <img
-src="https://files.catbox.moe/oxcet9.png" alt="Begin~" />
+          <p>今天来写一个五子棋的小项目，最终实现如下功能：<br><img src="https://files.catbox.moe/oxcet9.png" alt="Begin~"><br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/12/06/%E5%86%99%E4%B8%80%E4%B8%AA%E4%BA%94%E5%AD%90%E6%A3%8B%E5%B0%8F%E9%A1%B9%E7%9B%AE/#more" rel="contents">
@@ -835,9 +756,7 @@ src="https://files.catbox.moe/oxcet9.png" alt="Begin~" />
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="p3952时间复杂度"><a
-target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3952">P3952【时间复杂度】</a></h2>
-<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">4</span> O(n^<span class="number">2</span>)</span><br><span class="line"><span class="attribute">F</span> x <span class="number">1</span> n</span><br><span class="line"><span class="attribute">F</span> x <span class="number">1</span> <span class="number">10</span></span><br><span class="line"><span class="attribute">E</span></span><br><span class="line"><span class="attribute">E</span></span><br></pre></td></tr></table></figure>
+          <h2 id="P3952【时间复杂度】"><a href="#P3952【时间复杂度】" class="headerlink" title="P3952【时间复杂度】"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3952">P3952【时间复杂度】</a></h2><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">4</span> O(n^<span class="number">2</span>)</span><br><span class="line"><span class="attribute">F</span> x <span class="number">1</span> n</span><br><span class="line"><span class="attribute">F</span> x <span class="number">1</span> <span class="number">10</span></span><br><span class="line"><span class="attribute">E</span></span><br><span class="line"><span class="attribute">E</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/11/11/%E6%B4%9B%E8%B0%B7P3952%E3%80%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%91%E9%A2%98%E8%A7%A3/#more" rel="contents">
@@ -944,14 +863,11 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P3952">P39
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="p1706-全排列问题"><a
-target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1706">P1706 全排列问题</a></h2>
-<p>终于要写c++的博客了~近期从搜索入手，将暴力算法+剪枝掌握熟练</p>
+          <h2 id="P1706-全排列问题"><a href="#P1706-全排列问题" class="headerlink" title="P1706 全排列问题"></a><a target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1706">P1706 全排列问题</a></h2><p>终于要写c++的博客了~近期从搜索入手，将暴力算法+剪枝掌握熟练</p>
 <p>对于全排列问题，我们使用dfs，将搜索的当前状态设定为当前位置，通过遍历1~n，若该数没有被使用过，便将该数填入，然后寻找下一位，直到n+1位跳出递归。</p>
 <p>由此，我们可以大概抽象出dfs的基本步骤：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(当前状态)</span></span>&#123;</span><br><span class="line">    终止条件</span><br><span class="line"></span><br><span class="line">    对于当前状态进行遍历，寻找下一可行状态</span><br><span class="line">    改变下一状态相关参数</span><br><span class="line">    <span class="built_in">dfs</span>(下一状态)</span><br><span class="line">    恢复“下一状态”（时则为本次状态）原样</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="代码实现">代码实现：</h2>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">20</span>],flag[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur==n+<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cout&lt;&lt;<span class="built_in">setw</span>(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            a[cur]=i;</span><br><span class="line">            flag[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(cur+<span class="number">1</span>);</span><br><span class="line">            a[cur]=<span class="number">0</span>;</span><br><span class="line">            flag[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现："><a href="#代码实现：" class="headerlink" title="代码实现："></a>代码实现：</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">20</span>],flag[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur==n+<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cout&lt;&lt;<span class="built_in">setw</span>(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            a[cur]=i;</span><br><span class="line">            flag[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(cur+<span class="number">1</span>);</span><br><span class="line">            a[cur]=<span class="number">0</span>;</span><br><span class="line">            flag[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -1152,8 +1068,7 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1706">P17
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="最终效果">最终效果：</h2>
-<p><img title="" src="https://i0.imgs.ovh/2023/10/30/AAapI.jpeg" alt="3D谢尔宾斯基地毯" width="295" data-align="center"></p>
+          <h2 id="最终效果："><a href="#最终效果：" class="headerlink" title="最终效果："></a>最终效果：</h2><p><img title="" src="https://i0.imgs.ovh/2023/10/30/AAapI.jpeg" alt="3D谢尔宾斯基地毯" width="295" data-align="center"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/10/30/%E9%97%A8%E6%A0%BC%E6%B5%B7%E7%BB%B5/#more" rel="contents">
@@ -1355,23 +1270,14 @@ target="_blank" rel="noopener" href="https://www.luogu.com.cn/problem/P1706">P17
     <div class="post-body" itemprop="articleBody">
           <span id="more"></span>
 <!--more-->
-<h2 id="section"><!---more---></h2>
-<h1 id="quick-start">Quick Start</h1>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id=""><a href="#" class="headerlink" title=""></a><!---more---></h2><h1 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h1><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>

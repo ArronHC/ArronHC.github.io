@@ -119,20 +119,6 @@
 
   
   <url>
-    <loc>http://example.com/tags/%E9%A2%98%E8%A7%A3/</loc>
-    <lastmod>2024-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/C/</loc>
-    <lastmod>2024-03-14</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/%E6%B4%9B%E8%B0%B7%E9%A2%98%E8%A7%A3/</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -147,6 +133,20 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/%E9%A2%98%E8%A7%A3/</loc>
+    <lastmod>2024-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/C/</loc>
+    <lastmod>2024-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
@@ -154,14 +154,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E8%BF%AD%E4%BB%A3/</loc>
+    <loc>http://example.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
+    <loc>http://example.com/tags/%E8%BF%AD%E4%BB%A3/</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -177,14 +177,14 @@
   </url>
   
   <url>
-    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <loc>http://example.com/categories/Java%E9%A1%B9%E7%9B%AE/</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://example.com/categories/Java%E9%A1%B9%E7%9B%AE/</loc>
+    <loc>http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2024-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
