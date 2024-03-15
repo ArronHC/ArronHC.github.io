@@ -31,8 +31,10 @@ href="https://regex101.com/">网站</a></p>
 <p>使用转义字符<code>\</code>即可。</p>
 <p>例如，想要匹配字符串中的所有句号<code>.</code></p>
 <blockquote>
-<p>则这样写：
-<img src="https://files.catbox.moe/zb41ik.png" style="align:left" /></p>
+则这样写：
+<div style="display: flex; align-items: flex-start;">
+<p><img src="https://files.catbox.moe/zb41ik.png" alt="图片描述" /></p>
+</div>
 </blockquote>
 <h2 id="二元字符">二、元字符</h2>
 <blockquote>
@@ -300,8 +302,8 @@ r\)</span>的循环，那么后面的循环不再进行统计），其最大值�
         <category>C++</category>
       </categories>
       <tags>
-        <tag>洛谷题解</tag>
         <tag>C++</tag>
+        <tag>洛谷题解</tag>
       </tags>
   </entry>
   <entry>
