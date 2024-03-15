@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
 <meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 7.1.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
@@ -143,7 +143,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%A3%8B%E7%9B%98"><span class="nav-number">1.</span> <span class="nav-text">首先，我们需要创建一个棋盘：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="nav-number">1.0.1.</span> <span class="nav-text">设置参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%A3%8B%E7%9B%98"><span class="nav-number">1.0.2.</span> <span class="nav-text">绘制棋盘</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E9%9D%A2%E5%AE%9E%E7%8E%B0%E4%B8%8B%E6%A3%8B"><span class="nav-number">2.</span> <span class="nav-text">下面实现下棋</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%91%E7%99%BD%E4%BA%A4%E6%9B%BF%E4%B8%8B%E6%A3%8B"><span class="nav-number">2.0.1.</span> <span class="nav-text">黑白交替下棋</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E8%BE%93%E8%B5%A2"><span class="nav-number">2.0.2.</span> <span class="nav-text">判断输赢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%8B%E5%AD%90%E9%87%8D%E7%BB%98"><span class="nav-number">2.0.3.</span> <span class="nav-text">棋子重绘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%82%94%E6%A3%8B"><span class="nav-number">2.0.4.</span> <span class="nav-text">悔棋</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E7%A9%BA%E6%A3%8B%E7%9B%98"><span class="nav-number">2.0.5.</span> <span class="nav-text">清空棋盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E7%9B%98"><span class="nav-number">2.0.6.</span> <span class="nav-text">复盘</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E5%85%88%E6%88%91%E4%BB%AC%E9%9C%80%E8%A6%81%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%A3%8B%E7%9B%98"><span class="nav-text">首先，我们需要创建一个棋盘：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E5%8F%82%E6%95%B0"><span class="nav-text">设置参数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%98%E5%88%B6%E6%A3%8B%E7%9B%98"><span class="nav-text">绘制棋盘</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E9%9D%A2%E5%AE%9E%E7%8E%B0%E4%B8%8B%E6%A3%8B"><span class="nav-text">下面实现下棋</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%BB%91%E7%99%BD%E4%BA%A4%E6%9B%BF%E4%B8%8B%E6%A3%8B"><span class="nav-text">黑白交替下棋</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E8%BE%93%E8%B5%A2"><span class="nav-text">判断输赢</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A3%8B%E5%AD%90%E9%87%8D%E7%BB%98"><span class="nav-text">棋子重绘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%82%94%E6%A3%8B"><span class="nav-text">悔棋</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E7%A9%BA%E6%A3%8B%E7%9B%98"><span class="nav-text">清空棋盘</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%8D%E7%9B%98"><span class="nav-text">复盘</span></a></li></ol></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -268,6 +268,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
     <span class="post-meta-item" title="本文字数">
       <span class="post-meta-item-icon">
         <i class="far fa-file-word"></i>
@@ -417,7 +424,6 @@ alt="098i4e.png" /></p>
 
 
 
-    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -445,6 +451,24 @@ alt="098i4e.png" /></p>
     </span>
     <span title="站点阅读时长">24 分钟</span>
   </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
 </div><div>
   <span id="sitetime"></span>
   <script language=javascript>
@@ -524,6 +548,7 @@ alt="098i4e.png" /></p>
 
 
   
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
@@ -534,10 +559,6 @@ alt="098i4e.png" /></p>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
-
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"ArronHC","repo":"arronhc.github.io","client_id":"1bc478b3b921c0ec94d9","client_secret":"4b5eaa3a7463b84854f7046d9b55dfc0cf505a98","admin_user":"ArronHC","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"zh-CN","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"4cdf048598976d6cd638ee239cec7a9d"}</script>
-<script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
 </html>
