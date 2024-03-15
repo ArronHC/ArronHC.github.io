@@ -1,136 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>哈喽~欢迎来到我的博客🎊🎊🎊</title>
-    <url>/2023/11/08/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E6%83%85%E5%86%B5/</url>
-    <content><![CDATA[<p><img
-src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C247%2C247%2C1&amp;quote=Hold+On%7E%7E&amp;github=ArronHC&amp;luogu=Arron_HC" /></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>正则表达式的学习笔记</title>
-    <url>/2024/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>正则表达式无疑是一个令人头痛的东西...😵</p>
-<p>下面，请跟着我，step by step，认真学学<strong>它</strong>🫡</p>
-<p>在开始之前，推荐一个学习正则表达式的<a
-href="https://regex101.com/">网站</a></p>
-<p>大家可以从这个网站中在线测试正则表达式的匹配情况</p>
-<span id="more"></span>
-<hr />
-<p>首先，让我们聊聊什么是正则表达式？</p>
-<blockquote>
-<p>正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。一个正则表达式是一种从左到右匹配主体字符串的模式，常使用缩写的术语“regex”或“regexp”。</p>
-</blockquote>
-<h2 id="一最简单的字符串匹配">一、最简单的字符串匹配</h2>
-<blockquote>
-<p><img src="https://files.catbox.moe/j0h86h.png#pic_left" /></p>
-</blockquote>
-<p>让它匹配什么，它就去找什么</p>
-<p>但是，如果想要匹配的对象不巧是元字符怎么办？</p>
-<p>好办！</p>
-<p>使用转义字符<code>\</code>即可。</p>
-<p>例如，想要匹配字符串中的所有句号<code>.</code></p>
-<blockquote>
-则这样写：
-<div style="display: flex; align-items: flex-start;">
-<p><img src="https://files.catbox.moe/zb41ik.png" alt="图片描述" /></p>
-</div>
-</blockquote>
-<h2 id="二元字符">二、元字符</h2>
-<blockquote>
-<p>正则表达式主要依赖于元字符。元字符不代表他们本身的字面意思，他们都有特殊的含义。一些元字符写在方括号中的时候有一些特殊的意思。以下是一些元字符的介绍：
-<img src="https://files.catbox.moe/6btvuh.png#pic_left" /></p>
-</blockquote>
-<p>下面，我们逐个来理解熟悉：</p>
-<h3 id="句号-.">句号 .</h3>
-<p>匹配满足后缀的所有字符串</p>
-<p>举例：</p>
-<blockquote>
-<p>若表达式为<code>.ar</code>，则是匹配字符串中所有<code>ar</code>结尾的字符串</p>
-<p><img src="https://files.catbox.moe/kp8ckz.png#pic_left" /></p>
-</blockquote>
-<hr />
-<h3 id="字符集">字符集 []</h3>
-<p>在方括号中使用连字符来指定字符集的范围</p>
-<p>举例： &gt;
-&gt;若表达式为<code>[Tt]he</code>，则会匹配字符串中的所有<code>The</code>和<code>the</code>
-&gt; &gt;<img src="https://files.catbox.moe/74731v.png#pic_left" /></p>
-<p><font size=5>字符集中的字符没有顺序之分</font></p>
-<hr />
-<h3 id="否定字符集">否定字符集 [^]</h3>
-<p>字符<code>^</code>在<code>[]</code>使用，表示否定含义。</p>
-<p>例如： &gt;
-&gt;<code>[^a]re</code>，则代表匹配所有以<code>re</code>结尾，但是<code>re</code>前面不是<code>a</code>的字符串
-&gt; &gt;<img src="https://files.catbox.moe/2rqj00.png#pic_left" /></p>
-<hr />
-<h3 id="号">*号</h3>
-<p><code>*</code>字符表示前面的字符可以在字符串中出现零次或多次。换句话说，它用来表示其前面的字符的出现是可选的，并且这个字符可以重复任意次数，包括一次都不出现。</p>
-<p>例如： &gt;
-&gt;若表达式为<code>a*</code>，则会去匹配字符串中连续出现≥0次的a，即'','a','aa','aaa','aaaa'.....
-&gt; &gt;<img src="https://files.catbox.moe/qk3i5e.png#pic_left" /></p>
-<p>可以看到，所有的空字符""、连续出现的a都被统计了</p>
-<hr />
-<h3 id="号-1">+号</h3>
-<p>与<code>*</code>号类似，不过变成了连续出现≥1次</p>
-<blockquote>
-<p><img src="https://files.catbox.moe/eh1dv2.png#pic_left" /></p>
-</blockquote>
-<p>在前面几个的基础上，我们就可以形成<strong>组合拳</strong>！</p>
-<p>例如： &gt; &gt;挑出结尾是≥1个连续的<code>t</code>的字符串 &gt;
-&gt;就可以这样写： &gt; &gt;<img
-src="https://files.catbox.moe/xmqyx1.png#pic_left" /></p>
-<blockquote>
-<p>可以对比一下不加<code>+</code>的效果：</p>
-<p><img src="https://files.catbox.moe/gr4i3u.png#pic_left" /></p>
-</blockquote>
-<hr />
-<h3 id="号-2">?号</h3>
-<p><code>?</code>号前面的字符可出现，也可不出现</p>
-<p>例如： &gt;
-&gt;<code>T?he</code>会匹配所有的<code>The</code>和<code>he</code>，因为<code>T</code>可出现可不出现
-&gt; &gt;<img src="https://files.catbox.moe/w4d9kl.png#pic_left" /></p>
-<p>当然，我们大可以做一套组合拳，就像这样：</p>
-<blockquote>
-<p><img src="https://files.catbox.moe/kblq3v.png#pic_left" /></p>
-</blockquote>
-<p>这样就筛出了<code>The</code>,<code>the</code>和<code>he</code></p>
-<blockquote>
-<p>可以对比一下不加<code>?</code>的时候：</p>
-<p><img src="https://files.catbox.moe/60u5s0.png#pic_left" /></p>
-<p>则是筛选出<code>The</code>和<code>the</code></p>
-</blockquote>
-<hr />
-<h3 id="号-3">{}号</h3>
-<p>这是一个量词符号，表示某字符出现<code>xxx</code>次时才进行统计</p>
-<p>有三种使用情况：</p>
-<ul>
-<li><code>a&#123;3&#125;</code> 意味着字符<code>a</code>出现固定3次才算数</li>
-</ul>
-<blockquote>
-<p><img src="https://files.catbox.moe/3unwtd.png#pic_left" /></p>
-</blockquote>
-<ul>
-<li><code>a&#123;3,&#125;</code>意味着字符<code>a</code>出现≥3次算数</li>
-</ul>
-<blockquote>
-<p><img src="https://files.catbox.moe/bqjcrz.png#pic_left" /></p>
-</blockquote>
-<ul>
-<li><code>a&#123;3,4&#125;</code>意味着字符<code>a</code>出现3~4次算数</li>
-</ul>
-<blockquote>
-<p><img src="https://files.catbox.moe/il59gr.png#pic_left" /></p>
-</blockquote>
-<hr />
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>正则表达式</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CCF-CSP2023等级认证题解</title>
     <url>/2023/12/27/CCF-CSP2023%E7%AD%89%E7%BA%A7%E8%AE%A4%E8%AF%81%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<span id="more"></span>
@@ -171,6 +41,50 @@ href="http://118.190.20.162/view.page?gpid=T178">T3 树上搜索</a></h3>
       <tags>
         <tag>题解</tag>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo基本用法</title>
+    <url>/2023/10/29/hexo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
+    <content><![CDATA[<span id="more"></span>
+<!--more-->
+<h2 id="section"><!---more---></h2>
+<h1 id="quick-start">Quick Start</h1>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a
+href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>全排列</title>
+    <url>/2023/10/31/%E5%85%A8%E6%8E%92%E5%88%97/</url>
+    <content><![CDATA[<h2 id="p1706-全排列问题"><a
+href="https://www.luogu.com.cn/problem/P1706">P1706 全排列问题</a></h2>
+<p>终于要写c++的博客了~近期从搜索入手，将暴力算法+剪枝掌握熟练</p>
+<p>对于全排列问题，我们使用dfs，将搜索的当前状态设定为当前位置，通过遍历1~n，若该数没有被使用过，便将该数填入，然后寻找下一位，直到n+1位跳出递归。</p>
+<p>由此，我们可以大概抽象出dfs的基本步骤：</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(当前状态)</span></span>&#123;</span><br><span class="line">    终止条件</span><br><span class="line"></span><br><span class="line">    对于当前状态进行遍历，寻找下一可行状态</span><br><span class="line">    改变下一状态相关参数</span><br><span class="line">    <span class="built_in">dfs</span>(下一状态)</span><br><span class="line">    恢复“下一状态”（时则为本次状态）原样</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="代码实现">代码实现：</h2>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">20</span>],flag[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur==n+<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cout&lt;&lt;<span class="built_in">setw</span>(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            a[cur]=i;</span><br><span class="line">            flag[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(cur+<span class="number">1</span>);</span><br><span class="line">            a[cur]=<span class="number">0</span>;</span><br><span class="line">            flag[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>洛谷题解</tag>
+        <tag>递归</tag>
       </tags>
   </entry>
   <entry>
@@ -259,6 +173,130 @@ alt="098i4e.png" /></p>
       </categories>
   </entry>
   <entry>
+    <title>正则表达式的学习笔记</title>
+    <url>/2024/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>正则表达式无疑是一个令人头痛的东西...😵</p>
+<p>下面，请跟着我，step by step，认真学学<strong>它</strong>🫡</p>
+<p>在开始之前，推荐一个学习正则表达式的<a
+href="https://regex101.com/">网站</a></p>
+<p>大家可以从这个网站中在线测试正则表达式的匹配情况</p>
+<span id="more"></span>
+<hr />
+<p>首先，让我们聊聊什么是正则表达式？</p>
+<blockquote>
+<p>正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。一个正则表达式是一种从左到右匹配主体字符串的模式，常使用缩写的术语“regex”或“regexp”。</p>
+</blockquote>
+<h2 id="一最简单的字符串匹配">一、最简单的字符串匹配</h2>
+<p><img src="https://files.catbox.moe/j0h86h.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>让它匹配什么，它就去找什么</p>
+<p>但是，如果想要匹配的对象不巧是元字符怎么办？</p>
+<p>好办！</p>
+<p>使用转义字符<code>\</code>即可。</p>
+<p>例如，想要匹配字符串中的所有句号<code>.</code></p>
+<blockquote>
+<p>则这样写：
+<img src="https://files.catbox.moe/zb41ik.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<h2 id="二元字符">二、元字符</h2>
+<blockquote>
+<p>正则表达式主要依赖于元字符。元字符不代表他们本身的字面意思，他们都有特殊的含义。一些元字符写在方括号中的时候有一些特殊的意思。以下是一些元字符的介绍：
+<img src="https://files.catbox.moe/6btvuh.png" /></p>
+</blockquote>
+<p>下面，我们逐个来理解熟悉：</p>
+<h3 id="句号-.">句号 .</h3>
+<p>匹配满足后缀的所有字符串</p>
+<p>举例：</p>
+<blockquote>
+<p>若表达式为<code>.ar</code>，则是匹配字符串中所有<code>ar</code>结尾的字符串
+<img src="https://files.catbox.moe/kp8ckz.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<hr />
+<h3 id="字符集">字符集 []</h3>
+<p>在方括号中使用连字符来指定字符集的范围</p>
+<p>举例： &gt;
+&gt;若表达式为<code>[Tt]he</code>，则会匹配字符串中的所有<code>The</code>和<code>the</code>
+<img src="https://files.catbox.moe/74731v.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p><font size=5>字符集中的字符没有顺序之分</font></p>
+<hr />
+<h3 id="否定字符集">否定字符集 [^]</h3>
+<p>字符<code>^</code>在<code>[]</code>使用，表示否定含义。</p>
+<p>例如： &gt;
+&gt;<code>[^a]re</code>，则代表匹配所有以<code>re</code>结尾，但是<code>re</code>前面不是<code>a</code>的字符串
+<img src="https://files.catbox.moe/2rqj00.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<hr />
+<h3 id="号">*号</h3>
+<p><code>*</code>字符表示前面的字符可以在字符串中出现零次或多次。换句话说，它用来表示其前面的字符的出现是可选的，并且这个字符可以重复任意次数，包括一次都不出现。</p>
+<p>例如： &gt;
+&gt;若表达式为<code>a*</code>，则会去匹配字符串中连续出现≥0次的a，即'','a','aa','aaa','aaaa'.....
+<img src="https://files.catbox.moe/qk3i5e.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>可以看到，所有的空字符""、连续出现的a都被统计了</p>
+<hr />
+<h3 id="号-1">+号</h3>
+<p>与<code>*</code>号类似，不过变成了连续出现≥1次</p>
+<blockquote>
+<p><img src="https://files.catbox.moe/eh1dv2.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<p>在前面几个的基础上，我们就可以形成<strong>组合拳</strong>！</p>
+<blockquote>
+<p>例如：</p>
+<p>挑出结尾是≥1个连续的<code>t</code>的字符串</p>
+<p>就可以这样写：</p>
+<p><img src="https://files.catbox.moe/xmqyx1.png#pic_left" /></p>
+</blockquote>
+<blockquote>
+<p>可以对比一下不加<code>+</code>的效果：</p>
+<p><img src="https://files.catbox.moe/gr4i3u.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<hr />
+<h3 id="号-2">?号</h3>
+<p><code>?</code>号前面的字符可出现，也可不出现</p>
+<blockquote>
+<p>例如：</p>
+<p><code>T?he</code>会匹配所有的<code>The</code>和<code>he</code>，因为<code>T</code>可出现可不出现
+<img src="https://files.catbox.moe/w4d9kl.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<p>当然，我们大可以做一套组合拳，就像这样：</p>
+<blockquote>
+<p><img src="https://files.catbox.moe/kblq3v.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>这样就筛出了<code>The</code>,<code>the</code>和<code>he</code></p>
+</blockquote>
+<blockquote>
+<p>可以对比一下不加<code>?</code>的时候：
+<img src="https://files.catbox.moe/60u5s0.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>则是筛选出<code>The</code>和<code>the</code></p>
+</blockquote>
+<hr />
+<h3 id="号-3">{}号</h3>
+<p>这是一个量词符号，表示某字符出现<code>xxx</code>次时才进行统计</p>
+<p>有三种使用情况：</p>
+<ul>
+<li><code>a&#123;3&#125;</code> 意味着字符<code>a</code>出现固定3次才算数</li>
+</ul>
+<blockquote>
+<p><img src="https://files.catbox.moe/3unwtd.png"  style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<ul>
+<li><code>a&#123;3,&#125;</code>意味着字符<code>a</code>出现≥3次算数</li>
+</ul>
+<blockquote>
+<p><img src="https://files.catbox.moe/bqjcrz.png"  style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<ul>
+<li><code>a&#123;3,4&#125;</code>意味着字符<code>a</code>出现3~4次算数</li>
+</ul>
+<blockquote>
+<p><img src="https://files.catbox.moe/il59gr.png"  style="display: block; margin-right: auto; margin-left: 0;"/></p>
+</blockquote>
+<hr />
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>正则表达式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>洛谷P3952【时间复杂度】题解</title>
     <url>/2023/11/11/%E6%B4%9B%E8%B0%B7P3952%E3%80%90%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E3%80%91%E9%A2%98%E8%A7%A3/</url>
     <content><![CDATA[<h2 id="p3952时间复杂度"><a
@@ -307,23 +345,43 @@ r\)</span>的循环，那么后面的循环不再进行统计），其最大值�
       </tags>
   </entry>
   <entry>
-    <title>全排列</title>
-    <url>/2023/10/31/%E5%85%A8%E6%8E%92%E5%88%97/</url>
-    <content><![CDATA[<h2 id="p1706-全排列问题"><a
-href="https://www.luogu.com.cn/problem/P1706">P1706 全排列问题</a></h2>
-<p>终于要写c++的博客了~近期从搜索入手，将暴力算法+剪枝掌握熟练</p>
-<p>对于全排列问题，我们使用dfs，将搜索的当前状态设定为当前位置，通过遍历1~n，若该数没有被使用过，便将该数填入，然后寻找下一位，直到n+1位跳出递归。</p>
-<p>由此，我们可以大概抽象出dfs的基本步骤：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(当前状态)</span></span>&#123;</span><br><span class="line">    终止条件</span><br><span class="line"></span><br><span class="line">    对于当前状态进行遍历，寻找下一可行状态</span><br><span class="line">    改变下一状态相关参数</span><br><span class="line">    <span class="built_in">dfs</span>(下一状态)</span><br><span class="line">    恢复“下一状态”（时则为本次状态）原样</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="代码实现">代码实现：</h2>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">int</span> a[<span class="number">20</span>],flag[<span class="number">20</span>];</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">int</span> cur)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(cur==n+<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++) cout&lt;&lt;<span class="built_in">setw</span>(<span class="number">5</span>)&lt;&lt;a[i];</span><br><span class="line">        cout&lt;&lt;endl;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(flag[i]==<span class="number">0</span>)&#123;</span><br><span class="line">            a[cur]=i;</span><br><span class="line">            flag[i]=<span class="number">1</span>;</span><br><span class="line">            <span class="built_in">dfs</span>(cur+<span class="number">1</span>);</span><br><span class="line">            a[cur]=<span class="number">0</span>;</span><br><span class="line">            flag[i]=<span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    <span class="built_in">dfs</span>(<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <title>哈喽~欢迎来到我的博客🎊🎊🎊</title>
+    <url>/2023/11/08/%E6%B4%9B%E8%B0%B7%E5%88%B7%E9%A2%98%E6%83%85%E5%86%B5/</url>
+    <content><![CDATA[<p><img
+src="https://api.xecades.xyz/api?bg=0%2C0%2C0%2C0.66&amp;img=1&amp;color=250%2C247%2C247%2C1&amp;quote=Hold+On%7E%7E&amp;github=ArronHC&amp;luogu=Arron_HC" /></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>谢尔宾斯基地毯</title>
+    <url>/2023/10/29/%E8%B0%A2%E5%B0%94%E5%AE%BE%E6%96%AF%E5%9F%BA%E5%9C%B0%E6%AF%AF/</url>
+    <content><![CDATA[<p>先看成品：</p>
+<p><img src="https://i0.imgs.ovh/2023/10/29/AX64d.png" title="" alt="谢尔宾斯基地毯" width="202"></p>
+<span id="more"></span>
+<h3 id="实现思路迭代递归">实现思路：迭代递归</h3>
+<ul>
+<li>以画整张地毯的思路画某一块地毯，<strong>注意终止条件</strong></li>
+</ul>
+<p>需要的函数：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">fillRect(x,y,w,h);<span class="comment">//矩形左上角坐标+宽、高 </span></span><br></pre></td></tr></table></figure>
+<h1 id="前置知识">前置知识：</h1>
+<ol type="1">
+<li>继承</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">JFrame</span></span><br><span class="line"><span class="comment">//这里的意思是：</span></span><br><span class="line"><span class="comment">//DrawCarpet类继承了JFrame，于是在DrawCarpet类中可以直接调用JFrame的所有方法</span></span><br><span class="line"><span class="comment">//（DrawCarpet是JFrame的子类）</span></span><br></pre></td></tr></table></figure>
+<p>   2.构造函数</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">Jframe</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DrawCarpet</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//与类同名的函数不声明类型，这样在调用DrawCarpet类时会自动执行DrawCarpet()函数中的指令</span></span><br></pre></td></tr></table></figure>
+<p>   3.重构</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">    <span class="built_in">super</span>.paint(g);</span><br><span class="line">    DrawCarpet();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//@Override用来声明我们要自己重写java中自带的paint()函数，</span></span><br><span class="line"><span class="comment">//而super.paint(g)的意思是继承原本paint()函数中的所有方法</span></span><br></pre></td></tr></table></figure>
+<h1 id="代码实现">代码实现：</h1>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Scarpet</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Scarpet</span><span class="params">()</span>&#123;</span><br><span class="line">        setTitle(<span class="string">&quot;谢尔宾斯基地毯&quot;</span>);</span><br><span class="line">        setSize(<span class="number">800</span>,<span class="number">800</span>);</span><br><span class="line">        setResizable(<span class="literal">true</span>);</span><br><span class="line">        setDefaultCloseOperation(EXIT_ON_CLOSE);</span><br><span class="line">        setLocationRelativeTo(<span class="literal">null</span>);</span><br><span class="line">        setVisible(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.paint(g);</span><br><span class="line">        draw(<span class="number">150</span>,<span class="number">150</span>,<span class="number">500</span>,<span class="number">500</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> w,<span class="type">int</span> h,Graphics g)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(w&lt;<span class="number">3</span>) <span class="keyword">return</span> ;</span><br><span class="line">        g.fillRect(x+w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>);</span><br><span class="line">        draw(x,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Scarpet</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>通过Java，我们得以可视化递归的过程，显现递归之美。</p>
 ]]></content>
       <categories>
-        <category>C++</category>
+        <category>Java项目</category>
       </categories>
       <tags>
-        <tag>洛谷题解</tag>
         <tag>递归</tag>
+        <tag>可视化</tag>
       </tags>
   </entry>
   <entry>
@@ -405,62 +463,5 @@ System)迭代函数系统，可以通过迭代来创造出分形图案</p>
         <tag>递归</tag>
         <tag>可视化</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>谢尔宾斯基地毯</title>
-    <url>/2023/10/29/%E8%B0%A2%E5%B0%94%E5%AE%BE%E6%96%AF%E5%9F%BA%E5%9C%B0%E6%AF%AF/</url>
-    <content><![CDATA[<p>先看成品：</p>
-<p><img src="https://i0.imgs.ovh/2023/10/29/AX64d.png" title="" alt="谢尔宾斯基地毯" width="202"></p>
-<span id="more"></span>
-<h3 id="实现思路迭代递归">实现思路：迭代递归</h3>
-<ul>
-<li>以画整张地毯的思路画某一块地毯，<strong>注意终止条件</strong></li>
-</ul>
-<p>需要的函数：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">fillRect(x,y,w,h);<span class="comment">//矩形左上角坐标+宽、高 </span></span><br></pre></td></tr></table></figure>
-<h1 id="前置知识">前置知识：</h1>
-<ol type="1">
-<li>继承</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">JFrame</span></span><br><span class="line"><span class="comment">//这里的意思是：</span></span><br><span class="line"><span class="comment">//DrawCarpet类继承了JFrame，于是在DrawCarpet类中可以直接调用JFrame的所有方法</span></span><br><span class="line"><span class="comment">//（DrawCarpet是JFrame的子类）</span></span><br></pre></td></tr></table></figure>
-<p>   2.构造函数</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> DrawCarpet <span class="keyword">extends</span> <span class="title class_">Jframe</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">DrawCarpet</span><span class="params">()</span>&#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//与类同名的函数不声明类型，这样在调用DrawCarpet类时会自动执行DrawCarpet()函数中的指令</span></span><br></pre></td></tr></table></figure>
-<p>   3.重构</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span>&#123;</span><br><span class="line">    <span class="built_in">super</span>.paint(g);</span><br><span class="line">    DrawCarpet();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//@Override用来声明我们要自己重写java中自带的paint()函数，</span></span><br><span class="line"><span class="comment">//而super.paint(g)的意思是继承原本paint()函数中的所有方法</span></span><br></pre></td></tr></table></figure>
-<h1 id="代码实现">代码实现：</h1>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Scarpet</span> <span class="keyword">extends</span> <span class="title class_">JFrame</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Scarpet</span><span class="params">()</span>&#123;</span><br><span class="line">        setTitle(<span class="string">&quot;谢尔宾斯基地毯&quot;</span>);</span><br><span class="line">        setSize(<span class="number">800</span>,<span class="number">800</span>);</span><br><span class="line">        setResizable(<span class="literal">true</span>);</span><br><span class="line">        setDefaultCloseOperation(EXIT_ON_CLOSE);</span><br><span class="line">        setLocationRelativeTo(<span class="literal">null</span>);</span><br><span class="line">        setVisible(<span class="literal">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">paint</span><span class="params">(Graphics g)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.paint(g);</span><br><span class="line">        draw(<span class="number">150</span>,<span class="number">150</span>,<span class="number">500</span>,<span class="number">500</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">draw</span><span class="params">(<span class="type">int</span> x,<span class="type">int</span> y,<span class="type">int</span> w,<span class="type">int</span> h,Graphics g)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(w&lt;<span class="number">3</span>) <span class="keyword">return</span> ;</span><br><span class="line">        g.fillRect(x+w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>);</span><br><span class="line">        draw(x,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">        draw(x+<span class="number">2</span>*w/<span class="number">3</span>,y+<span class="number">2</span>*h/<span class="number">3</span>,w/<span class="number">3</span>,h/<span class="number">3</span>,g);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="keyword">new</span> <span class="title class_">Scarpet</span>();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>通过Java，我们得以可视化递归的过程，显现递归之美。</p>
-]]></content>
-      <categories>
-        <category>Java项目</category>
-      </categories>
-      <tags>
-        <tag>递归</tag>
-        <tag>可视化</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo基本用法</title>
-    <url>/2023/10/29/hexo%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</url>
-    <content><![CDATA[<span id="more"></span>
-<!--more-->
-<h2 id="section"><!---more---></h2>
-<h1 id="quick-start">Quick Start</h1>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
