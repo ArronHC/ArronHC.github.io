@@ -2763,8 +2763,9 @@ header.header {
 .posts-expand .post-eof {
   display: none;
 }
-.posts-expand .post-block:not(:first-of-type) {
-  margin-top: 120px;
+.posts-expand .post-block:not(:first-child) {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .posts-expand .post-header {
   margin-bottom: 20px;
@@ -2792,6 +2793,10 @@ header.header {
 }
 .post-button .btn:hover {
   border-bottom-color: var(--btn-default-hover-border-color);
+}
+.posts-expand .post {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 header.header {
   margin: 0 auto;
@@ -2891,7 +2896,7 @@ header.header {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #78a147;
+  background: #966724;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2952,7 +2957,7 @@ body {
 .main-inner > .tabs-comment,
 .main-inner > .comments,
 .main-inner > .pagination {
-  background: rgba(0,0,0,0.502);
+  background: rgba(0,0,0,0.349);
 }
 body {
   color: #fff;
@@ -2965,4 +2970,8 @@ body {
 }
 .sidebar {
   opacity: 0.85;
+}
+.post,
+.post img {
+  opacity: 1; /* 完全不透明 */
 }
