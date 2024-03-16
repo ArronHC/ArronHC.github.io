@@ -20,12 +20,12 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac"},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="正则表达式无疑是一个令人头痛的东西...😵 下面，请跟着我，step by step，认真学学它🫡 在开始之前，推荐一个学习正则表达式的网站 大家可以从这个网站中在线测试正则表达式的匹配情况">
+    <meta name="description" content="正则表达式无疑是一个令人头痛的东西…😵 下面，请跟着我，step by step，认真学学它🫡 在开始之前，推荐一个学习正则表达式的网站 大家可以从这个网站中在线测试正则表达式的匹配情况">
 <meta property="og:type" content="article">
 <meta property="og:title" content="正则表达式的学习笔记">
 <meta property="og:url" content="http://example.com/2024/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="ArronHC&#39;s Blog">
-<meta property="og:description" content="正则表达式无疑是一个令人头痛的东西...😵 下面，请跟着我，step by step，认真学学它🫡 在开始之前，推荐一个学习正则表达式的网站 大家可以从这个网站中在线测试正则表达式的匹配情况">
+<meta property="og:description" content="正则表达式无疑是一个令人头痛的东西…😵 下面，请跟着我，step by step，认真学学它🫡 在开始之前，推荐一个学习正则表达式的网站 大家可以从这个网站中在线测试正则表达式的匹配情况">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://files.catbox.moe/j0h86h.png">
 <meta property="og:image" content="https://files.catbox.moe/zb41ik.png">
@@ -157,7 +157,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D"><span class="nav-text">一、最简单的字符串匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">二、元字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%A5%E5%8F%B7-."><span class="nav-text">1. 句号 .</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">2. 字符集 []</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%A6%E5%AE%9A%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">3. 否定字符集 [^]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B7"><span class="nav-text">4. *号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B7-1"><span class="nav-text">5. +号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B7-2"><span class="nav-text">6. ?号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%B7-3"><span class="nav-text">7. {}号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#section"><span class="nav-text">8.</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D"><span class="nav-text">一、最简单的字符串匹配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%85%83%E5%AD%97%E7%AC%A6"><span class="nav-text">二、元字符</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%8F%A5%E5%8F%B7"><span class="nav-text">1. 句号 .</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">2. 字符集 []</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E5%90%A6%E5%AE%9A%E5%AD%97%E7%AC%A6%E9%9B%86"><span class="nav-text">3. 否定字符集 </span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%8F%B7"><span class="nav-text">4. *号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E5%8F%B7"><span class="nav-text">5. +号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%8F%B7"><span class="nav-text">6. ?号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E5%8F%B7"><span class="nav-text">7. {}号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8"><span class="nav-text">8.</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -326,19 +326,17 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>正则表达式无疑是一个令人头痛的东西...😵</p>
+    <div class="post-body" itemprop="articleBody"><p>正则表达式无疑是一个令人头痛的东西…😵</p>
 <p>下面，请跟着我，step by step，认真学学<strong>它</strong>🫡</p>
-<p>在开始之前，推荐一个学习正则表达式的<a
-target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
+<p>在开始之前，推荐一个学习正则表达式的<a target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
 <p>大家可以从这个网站中在线测试正则表达式的匹配情况</p>
 <span id="more"></span>
-<hr />
+<hr>
 <p>首先，让我们聊聊什么是正则表达式？</p>
 <blockquote>
 <p>正则表达式是一组由字母和符号组成的特殊文本，它可以用来从文本中找出满足你想要的格式的句子。一个正则表达式是一种从左到右匹配主体字符串的模式，常使用缩写的术语“regex”或“regexp”。</p>
 </blockquote>
-<h2 id="一最简单的字符串匹配">一、最简单的字符串匹配</h2>
-<blockquote>
+<h2 id="一、最简单的字符串匹配"><a href="#一、最简单的字符串匹配" class="headerlink" title="一、最简单的字符串匹配"></a>一、最简单的字符串匹配</h2><blockquote>
 <p><img src="https://files.catbox.moe/j0h86h.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
 <p>让它匹配什么，它就去找什么</p>
@@ -347,51 +345,40 @@ target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
 <p>使用转义字符<code>\</code>即可。</p>
 <p>例如，想要匹配字符串中的所有句号<code>.</code></p>
 <blockquote>
-<p>则这样写：
-<img src="https://files.catbox.moe/zb41ik.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>则这样写：<br><img src="https://files.catbox.moe/zb41ik.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<h2 id="二元字符">二、元字符</h2>
-<blockquote>
-<p>正则表达式主要依赖于元字符。元字符不代表他们本身的字面意思，他们都有特殊的含义。一些元字符写在方括号中的时候有一些特殊的意思。以下是一些元字符的介绍：
-<img src="https://files.catbox.moe/6btvuh.png" /></p>
+<h2 id="二、元字符"><a href="#二、元字符" class="headerlink" title="二、元字符"></a>二、元字符</h2><blockquote>
+<p>正则表达式主要依赖于元字符。元字符不代表他们本身的字面意思，他们都有特殊的含义。一些元字符写在方括号中的时候有一些特殊的意思。以下是一些元字符的介绍：<br><img src="https://files.catbox.moe/6btvuh.png" alt=""></p>
 </blockquote>
 <p>下面，我们逐个来理解熟悉：</p>
-<h3 id="句号-.">1. 句号 .</h3>
-<p>匹配满足后缀的所有字符串</p>
+<h3 id="1-句号"><a href="#1-句号" class="headerlink" title="1. 句号 ."></a>1. 句号 .</h3><p>匹配满足后缀的所有字符串</p>
 <p>举例：</p>
 <blockquote>
-<p>若表达式为<code>.ar</code>，则是匹配字符串中所有<code>ar</code>结尾的字符串
-<img src="https://files.catbox.moe/kp8ckz.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>若表达式为<code>.ar</code>，则是匹配字符串中所有<code>ar</code>结尾的字符串<br><img src="https://files.catbox.moe/kp8ckz.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<hr />
-<h3 id="字符集">2. 字符集 []</h3>
-<p>在方括号中使用连字符来指定字符集的范围</p>
+<hr>
+<h3 id="2-字符集"><a href="#2-字符集" class="headerlink" title="2. 字符集 []"></a>2. 字符集 []</h3><p>在方括号中使用连字符来指定字符集的范围</p>
 <blockquote>
 <p>举例：</p>
-<p>若表达式为<code>[Tt]he</code>，则会匹配字符串中的所有<code>The</code>和<code>the</code>
-<img src="https://files.catbox.moe/74731v.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>若表达式为<code>[Tt]he</code>，则会匹配字符串中的所有<code>The</code>和<code>the</code><br><img src="https://files.catbox.moe/74731v.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<p><font size=5>字符集中的字符没有顺序之分!</font></p>
-<hr />
-<h3 id="否定字符集">3. 否定字符集 [^]</h3>
-<p>字符<code>^</code>在<code>[]</code>使用，表示否定含义。</p>
+<font size=5>字符集中的字符没有顺序之分!</font>
+
+<hr>
+<h3 id="3-否定字符集"><a href="#3-否定字符集" class="headerlink" title="3. 否定字符集 "></a>3. 否定字符集 <sup><a href="#fn_" id="reffn_"></a></sup></h3><p>字符<code>^</code>在<code>[]</code>使用，表示否定含义。</p>
 <blockquote>
 <p>例如：</p>
-<p><code>[^a]re</code>，则代表匹配所有以<code>re</code>结尾，但是<code>re</code>前面不是<code>a</code>的字符串
-<img src="https://files.catbox.moe/2rqj00.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p><code>[^a]re</code>，则代表匹配所有以<code>re</code>结尾，但是<code>re</code>前面不是<code>a</code>的字符串<br><img src="https://files.catbox.moe/2rqj00.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<hr />
-<h3 id="号">4. *号</h3>
-<p><code>*</code>字符表示前面的字符可以在字符串中出现零次或多次。换句话说，它用来表示其前面的字符的出现是可选的，并且这个字符可以重复任意次数，包括一次都不出现。</p>
+<hr>
+<h3 id="4-号"><a href="#4-号" class="headerlink" title="4. *号"></a>4. *号</h3><p><code>*</code>字符表示前面的字符可以在字符串中出现零次或多次。换句话说，它用来表示其前面的字符的出现是可选的，并且这个字符可以重复任意次数，包括一次都不出现。</p>
 <blockquote>
 <p>例如：</p>
-<p>若表达式为<code>a*</code>，则会去匹配字符串中连续出现≥0次的a，即'','a','aa','aaa','aaaa'.....
-<img src="https://files.catbox.moe/qk3i5e.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>若表达式为<code>a*</code>，则会去匹配字符串中连续出现≥0次的a，即’’,’a’,’aa’,’aaa’,’aaaa’…..<br><img src="https://files.catbox.moe/qk3i5e.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<p>可以看到，所有的空字符""、连续出现的a都被统计了</p>
-<hr />
-<h3 id="号-1">5. +号</h3>
-<p>与<code>*</code>号类似，不过变成了连续出现≥1次</p>
+<p>可以看到，所有的空字符””、连续出现的a都被统计了</p>
+<hr>
+<h3 id="5-号"><a href="#5-号" class="headerlink" title="5. +号"></a>5. +号</h3><p>与<code>*</code>号类似，不过变成了连续出现≥1次</p>
 <blockquote>
 <p><img src="https://files.catbox.moe/eh1dv2.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
@@ -401,32 +388,24 @@ target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
 <p>挑出结尾是≥1个连续的<code>t</code>的字符串</p>
 <p>就可以这样写：</p>
 <p><img src="https://files.catbox.moe/xmqyx1.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
-</blockquote>
-<blockquote>
 <p>可以对比一下不加<code>+</code>的效果：</p>
 <p><img src="https://files.catbox.moe/gr4i3u.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<hr />
-<h3 id="号-2">6. ?号</h3>
-<p><code>?</code>号前面的字符可出现，也可不出现</p>
+<hr>
+<h3 id="6-号"><a href="#6-号" class="headerlink" title="6. ?号"></a>6. ?号</h3><p><code>?</code>号前面的字符可出现，也可不出现</p>
 <blockquote>
 <p>例如：</p>
-<p><code>T?he</code>会匹配所有的<code>The</code>和<code>he</code>，因为<code>T</code>可出现可不出现
-<img src="https://files.catbox.moe/w4d9kl.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p><code>T?he</code>会匹配所有的<code>The</code>和<code>he</code>，因为<code>T</code>可出现可不出现<br><img src="https://files.catbox.moe/w4d9kl.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
 <p>当然，我们大可以做一套组合拳，就像这样：</p>
 <blockquote>
 <p><img src="https://files.catbox.moe/kblq3v.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 <p>这样就筛出了<code>The</code>,<code>the</code>和<code>he</code></p>
-</blockquote>
-<blockquote>
-<p>可以对比一下不加<code>?</code>的时候：
-<img src="https://files.catbox.moe/60u5s0.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
+<p>可以对比一下不加<code>?</code>的时候：<br><img src="https://files.catbox.moe/60u5s0.png" style="display: block; margin-right: auto; margin-left: 0;"/></p>
 <p>则是筛选出<code>The</code>和<code>the</code></p>
 </blockquote>
-<hr />
-<h3 id="号-3">7. {}号</h3>
-<p>这是一个量词符号，表示某字符出现<code>xxx</code>次时才进行统计</p>
+<hr>
+<h3 id="7-号"><a href="#7-号" class="headerlink" title="7. {}号"></a>7. {}号</h3><p>这是一个量词符号，表示某字符出现<code>xxx</code>次时才进行统计</p>
 <p>有三种使用情况：</p>
 <ul>
 <li><code>a&#123;3&#125;</code> 意味着字符<code>a</code>出现固定3次才算数</li>
@@ -446,9 +425,8 @@ target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
 <blockquote>
 <p><img src="https://files.catbox.moe/il59gr.png"  style="display: block; margin-right: auto; margin-left: 0;"/></p>
 </blockquote>
-<hr />
-<h3 id="section">8.</h3>
-
+<hr>
+<h3 id="8"><a href="#8" class="headerlink" title="8."></a>8.</h3>
     </div>
 
     
@@ -633,7 +611,7 @@ target="_blank" rel="noopener" href="https://regex101.com/">网站</a></p>
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2024/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"waline-server-pearl.vercel.app","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"请文明评论呀","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"reaction":true,"path":"/2024/03/14/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%9A%84%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
