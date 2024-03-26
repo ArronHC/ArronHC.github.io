@@ -127,7 +127,7 @@ href="https://regex101.com/">网站</a></p>
 意味着将会去统计字符串中的<code>aaa</code>，每出现一次<code>aaa</code>，统计一次。</li>
 </ol>
 <blockquote>
-<p><img src="https://files.catbox.moe/rb7x0w.png" style="margin-left:0;"></p>
+<p><img src="https://files.catbox.moe/uc8eee.png" style="margin-left:0;"></p>
 </blockquote>
 <ol start="2" type="1">
 <li><code>a&#123;3,&#125;</code>意味着字符<code>a</code>出现≥3次算数</li>
